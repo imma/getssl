@@ -1,0 +1,3 @@
+[submodule "vendor/getssl"]
+	path = vendor/getssl
+	url = git@github.com:srvrco/getssl
