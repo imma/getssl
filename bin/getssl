@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+function main {
+  local shome="${_getssl_home:="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
+  source "$shome/script/profile"
+  PATH="$shome/.bin:$PATH"
+
+  exec "$shome/vendor/getssl/getssl" "$@"
+}
+
+main "$@"

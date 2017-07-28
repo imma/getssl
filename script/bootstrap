@@ -7,9 +7,6 @@ function main {
   block compile gitsubmodule
   cd "$shome/vendor/getssl"
   git reset --hard "v$GETSSL_VERSION"
-  mkdir -p "$shome/bin"
-  ln -nfs "$shome/vendor/getssl/getssl" "$shome/bin/"
-  chmod 755 "$shome/vendor/getssl/getssl"
 }
 
 main "$@"
