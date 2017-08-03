@@ -5,7 +5,7 @@ function main {
   source "$shome/script/profile"
 
   PATH="/bin:/sbin:/usr/bin:/usr/sbin:$PATH"
-  exec "$shome/vendor/getssl/getssl" "$@"
+  exec bash4 "$shome/vendor/getssl/getssl" "$@"
 }
 
 main "$@"
