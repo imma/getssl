@@ -5,8 +5,12 @@ function main {
   source "$shome/script/profile"
 
   block compile gitsubmodule
+
   cd "$shome/vendor/getssl"
   git reset --hard "v$GETSSL_VERSION"
+
+  cd "$shome/vendor/checkssl"
+  git reset --hard "v$CHECKSSL_VERSION"
 }
 
 main "$@"

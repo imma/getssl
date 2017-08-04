@@ -1,3 +1,6 @@
 [submodule "vendor/getssl"]
 	path = vendor/getssl
 	url = git@github.com:srvrco/getssl
+[submodule "vendor/checkssl"]
+	path = vendor/checkssl
+	url = https://github.com/srvrco/checkssl
