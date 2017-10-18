@@ -4,7 +4,7 @@ function main {
   local shome="${_getssl_home:="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
   source "$shome/script/profile"
 
-  PATH="/bin:/sbin:/usr/bin:/usr/sbin:$PATH"
+  PATH="/bin:/sbin:/usr/sbin:$PATH"
   exec bash4 "$shome/vendor/checkssl/checkssl" "$@"
 }
 
