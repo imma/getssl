@@ -4,6 +4,10 @@ function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
+  if ! type -P dig >/dev/null; then
+    return 1
+  fi
+
   if [[ "$($shome/script/version | jq -r '.getssl')" != "$GETSSL_VERSION" ]]; then
     return 1
   fi
