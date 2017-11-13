@@ -13,13 +13,13 @@ function main {
       ;;
   esac
 
-  block compile gitsubmodule
+  git clone -b "v${GETSSL_VERSION}" git@github.com:srvrco/getssl "$shome/vendor/getssl-${GETSSL_VERSION}" || true
+  rm -rf "$shome/vendor/getssl"
+  ln -nfs "getssl-${GETSSL_VERSION}" "$shome/vendor/getssl"
 
-  cd "$shome/vendor/getssl"
-  git reset --hard "v$GETSSL_VERSION"
-
-  cd "$shome/vendor/checkssl"
-  git reset --hard "v$CHECKSSL_VERSION"
+  git clone -b "v${CHECKSSL_VERSION}" git@github.com:srvrco/checkssl "$shome/vendor/checkssl-${CHECKSSL_VERSION}" || true
+  rm -rf "$shome/vendor/checkssl"
+  ln -nfs "checkssl-${CHECKSSL_VERSION}" "$shome/vendor/checkssl"
 }
 
 main "$@"
