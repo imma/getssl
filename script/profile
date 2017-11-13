@@ -3,11 +3,6 @@
 function _getssl_profile {
   local shome="${_getssl_home:="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
   PATH="$shome/bin:$shome/exec:$PATH"
-  #export ANSIBLE_ROLES_PATH="$shome/roles${ANSIBLE_ROLES_PATH:+:${ANSIBLE_ROLES_PATH}}"
-  #export ANSIBLE_LIBRARY="$shome/library${ANSIBLE_LIBRARY:+:${ANSIBLE_LIBRARY}}"
-
-  GETSSL_VERSION='2.10'
-  CHECKSSL_VERSION='1.18'
 }
 
 _getssl_profile
