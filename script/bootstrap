@@ -8,6 +8,9 @@ function main {
     Darwin)
       true
       ;;
+    *)
+      pkg ensure net/bind910
+      ;;
   esac
 
   git clone -b "v${GETSSL_VERSION}" git@github.com:srvrco/getssl "$shome/vendor/getssl-${GETSSL_VERSION}" || true
